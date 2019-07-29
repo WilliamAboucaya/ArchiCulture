@@ -11,7 +11,8 @@ class HomePage extends Component {
     render() {
         return (
             <View style={Styles.container}>
-                <Text>Open up App.js to start working on your app!</Text>
+                <Text>Page with details.</Text>
+                <Text>Blah blah blah...</Text>
             </View>
         )
     }
