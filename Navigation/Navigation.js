@@ -1,6 +1,7 @@
 import { createStackNavigator, createAppContainer } from 'react-navigation'
 import HomePage from '../Components/HomePage'
 import DetailsPage from '../Components/DetailsPage'
+import CameraPage from '../Components/CameraPage'
 
 const AppStackNavigator = createStackNavigator({
     HomePage: {
@@ -11,6 +12,9 @@ const AppStackNavigator = createStackNavigator({
     },
     DetailsPage: {
         screen: DetailsPage
+    },
+    CameraPage: {
+        screen: CameraPage
     }
 }, {
         headerMode: 'none',
