@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import { StyleSheet, Dimensions, Text, View, Image, Platform, CameraRoll, Alert } from 'react-native';
+import { Text, View, CameraRoll, Alert } from 'react-native';
 import { Camera } from 'expo-camera'
 import * as Permissions from 'expo-permissions'
 import * as ImagePicker from 'expo-image-picker'
