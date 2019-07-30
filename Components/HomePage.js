@@ -22,28 +22,19 @@ class HomePage extends Component {
     render() {
         return (
             <View style={Styles.container}>
-                <Text>Open up App.js to start working on your app!</Text>
+                <Text>Bienvenue sur ArchiCulture</Text>
 
                 <Button onPress={this.goToCameraPage}
-                    title="Take Picture"
+                    title="Prendre une photo"
                     color="#1194f6" />
-                <Button onPress={this.goToDetailsPage}
-                    title="Details"
-                    color="#841584" />
             </View>
         )
     }
 
     goToCameraPage = () => {
-        this.props.navigation.navigate("CameraPage")
+        this.setState({photoNumber: this.state.photoNumber+1})
+        this.props.navigation.navigate("CameraPage", {photoNumber:this.state.photoNumber})
     }
-
-    goToDetailsPage = () => {
-        this.setState({photoNumber: this.state.photoNumber+1});
-        console.log(this.state.photoNumber)
-        this.props.navigation.navigate("DetailsPage", {photoNumber:this.state.photoNumber});
-    }
-    
 }
 
 export default HomePage
