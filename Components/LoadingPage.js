@@ -10,8 +10,8 @@ class LoadingPage extends Component {
     }
 
     componentDidMount() {
-        setTimeout(function () { console.log("Processing...") }, 3000)
-        this.props.navigation.navigate('DetailsPage', { photoNumber: this.props.navigation.getParam('photoNumber') })
+        let that = this
+        setTimeout(function () { that.props.navigation.navigate('DetailsPage', { photoNumber: that.props.navigation.getParam('photoNumber') }) }, 5000)
     }
 
     render() {
