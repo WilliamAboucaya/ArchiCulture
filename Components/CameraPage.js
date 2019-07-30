@@ -1,5 +1,5 @@
 import React, {Component} from 'react'
-import { Dimensions, Text, View, CameraRoll, Alert } from 'react-native'
+import { Dimensions, Text, View } from 'react-native'
 import { Camera } from 'expo-camera'
 import * as Permissions from 'expo-permissions'
 import * as ImagePicker from 'expo-image-picker'
@@ -43,7 +43,7 @@ class CameraPage extends Component {
             this.setState({ name: "" })
             this.setDimensions(result.width, result.height)
             
-            this.props.navigation.navigate('DetailsPage', {photoNumber:this.props.navigation.getParam('photoNumber')})
+            this.props.navigation.navigate('LoadingPage', {photoNumber:this.props.navigation.getParam('photoNumber')})
         }
         else if (result.cancelled) {
             this.props.navigation.navigate('HomePage')
