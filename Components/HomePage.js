@@ -6,7 +6,7 @@ import PermissionsHelper from '../Helpers/PermissionsHelper'
 
 class HomePage extends Component {
     state ={
-        photoNumber: 1,
+        photoNumber: 0,
     }
     
     constructor() {
@@ -32,7 +32,7 @@ class HomePage extends Component {
     }
 
     goToCameraPage = () => {
-        this.setState({photoNumber: this.state.photoNumber+1})
+        this.setState({photoNumber: (this.state.photoNumber+1) % 3})
         this.props.navigation.navigate("CameraPage", {photoNumber:this.state.photoNumber})
     }
 }

@@ -5,7 +5,7 @@ import getAnecdote from '../Helpers/GetAnecdoteHelper'
 import getHeaderWiki from '../Helpers/GetWikiHeaderHelper'
 
 import Styles from '../Styles/Styles'
-import { ScrollView, TouchableWithoutFeedback, TouchableHighlight } from 'react-native-gesture-handler';
+import { ScrollView } from 'react-native-gesture-handler';
 
 
 class DetailsPage extends Component {
@@ -19,13 +19,13 @@ class DetailsPage extends Component {
         console.log(this.props.navigation.getParam('photoNumber'));
 
         let name = "";
-        if(photoNumber == 1){
+        if(photoNumber == 0){
             name = 'tour_effeil';
         }
-        else if(photoNumber == 2){
+        else if(photoNumber == 1){
             name = 'tour_de_pise';
         }
-        else if(photoNumber == 3){
+        else if(photoNumber == 2){
             name = 'le_louvre';
         }
         return (
